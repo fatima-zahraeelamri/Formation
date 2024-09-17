@@ -43,6 +43,32 @@ figure, header, nav, section, article, aside, footer, figcaption {
   border: 0;
   outline: 0;
 }
+/* Styles personnalisés pour les liens de navigation */
+.main-nav a {
+  color: #ffffff; /* Couleur du texte pour le lien */
+  text-decoration: none; /* Supprime la soulignement par défaut */
+  font-weight: 600; /* Poids de police modéré */
+  
+}
+
+
+.main-nav a:hover {
+  color: #f5a425; /* Couleur au survol pour plus d'interaction */
+  text-decoration: none; /* Supprime la soulignement au survol */
+}
+.main-nav ul {
+  list-style: none; /* Supprime les puces de liste */
+  padding: 0; /* Supprime le padding par défaut */
+  margin: 0; /* Supprime la marge par défaut */
+  display: flex; /* Utilise le flexbox pour aligner les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+}
+
+.main-nav ul li {
+  margin: 0 5px; /* Ajoute un espacement entre les éléments du menu */
+}
+
+
 
 .clearfix:after {
   content: ".";
@@ -289,7 +315,7 @@ header
 }
 
 .header-area .main-nav .logo {
-  line-height: 100px;
+  line-height: 100px; /* Ajuste la hauteur de la ligne pour aligner verticalement le logo */
   color: #fff;
   font-size: 28px;
   font-weight: 700;
@@ -302,9 +328,15 @@ header
   transition: all 0.3s ease 0s;
 }
 
+.header-area .main-nav .logo img {
+  height: 80px; /* Hauteur du logo */
+  width: auto; /* Garde les proportions de l'image */
+}
+
 .background-header .main-nav .logo {
   line-height: 75px;
 }
+
 
 .background-header .nav {
   margin-top: 20px !important;
@@ -556,9 +588,7 @@ header
   margin-top: 30px;
 }
 
-.header-area.header-sticky .nav li a.active {
-  color: #f5a425;
-}
+
 
 @media (max-width: 1200px) {
   .header-area .main-nav .nav li {
@@ -575,10 +605,7 @@ header
     color: #1e1e1e;
   }
   .header-area.header-sticky .nav li a:hover,
-  .header-area.header-sticky .nav li a.active {
-    color: #f5a425!important;
-    opacity: 1;
-  }
+  
   .header-area.header-sticky .nav li.search-icon a {
     width: 100%;
   }
@@ -1246,7 +1273,14 @@ section.our-courses {
   border-radius: 50%;
   line-height: 50px;
 }
-
+.our-courses .item img {
+  width: 100%; /* Ensures all images take the full width of their container */
+  height: 200px; /* Set the same height for all images */
+  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+}
+.button-right {
+  margin-left: 50px!important; /* Adjust this value to move the button to the right */
+}
 
 /*
 ---------------------------------------------
@@ -1278,6 +1312,7 @@ section.our-facts h2 {
   border-radius: 20px;
   padding: 25px 30px 35px 30px;
   margin: 15px 0px;
+  
 }
 
 .percentage .count-digit:after {
@@ -1294,7 +1329,7 @@ section.our-facts h2 {
 .count-title {
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color:#f5a425;
     letter-spacing: 0.5px;
 }
 
@@ -1430,6 +1465,121 @@ section.contact-us .right-info ul li span {
   color: #fff;
   font-weight: 700;
 }
+/* CSS pour la section d'inscription */
+section.inscription-section {
+  background-image: url(../images/meetings-bg.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 140px 0px 0px 0px;
+}
+
+section.inscription-section #inscription-form {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px; /* Limite la largeur maximale du formulaire */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour un effet moderne */
+  margin: 0 auto;
+
+    
+
+}
+
+section.inscription-section #inscription-form h2 {
+  text-transform: uppercase;
+  color: #1f272b;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+section.inscription-section #inscription-form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a7a7a;
+  padding: 0px 15px;
+  margin-bottom: 30px;
+}
+
+section.inscription-section #inscription-form textarea {
+  width: 100%;
+  min-height: 140px;
+  max-height: 180px;
+  border-radius: 20px;
+  background-color: #f7f7f7;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: #7a7a7a;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+section.inscription-section #inscription-form button {
+  font-size: 13px;
+  color: #fff;
+  background-color: #a12c2f;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .3s;
+  border: none;
+  outline: none;
+}
+
+section.inscription-section #inscription-form button:hover {
+  opacity: 0.9;
+}
+
+section.inscription-section .right-info {
+  background-color: #a12c2f;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+section.inscription-section .right-info ul li {
+  display: inline-block;
+  border-bottom: 1px solid rgba(250,250,250,0.15);
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+section.inscription-section .right-info ul li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+section.inscription-section .right-info ul li h6 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+section.inscription-section .right-info ul li span {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+
 
 .footer {
   text-align: center;
@@ -1695,6 +1845,128 @@ section.meetings-page .pagination ul li a:hover {
 		width: 100%;
 	}
 }
+/* Style pour la section user-info */
+/* Style pour la section user-info */
+/* Style pour la section user-info */
+/* Style pour la section user-info */
+/* Style pour la section user-info */
+section.user-info {
+  background-image: url('/edu-meeting/edu-meeting/assets/images/meetings-page-bg.jpg');
+
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 0; /* Espacement autour du contenu */
+  height: 100vh; /* Ajuste la hauteur automatiquement en fonction du contenu */
+  display: flex;
+  align-items: center; /* Centre le contenu verticalement */
+  justify-content: center; /* Centre le contenu horizontalement */
+  color: #fff; /* Couleur du texte */
+  padding-top: 180px; /* Ajustez cette valeur pour déplacer le formulaire plus bas */
+  
+}
+html, body {
+  height: 100%; /* Hauteur à 100% pour que l'arrière-plan couvre toute la page */
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* Assure que le fond est transparent */
+}
+
+/* Appliquer l'arrière-plan sur tout le document */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/edu-meeting/edu-meeting/assets/images/meetings-bg.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1; /* Place l'arrière-plan derrière tout le contenu */
+  opacity: 1; /* Assure la pleine opacité */
+}
+
+section.user-info .container {
+  background-color: rgba(255, 255, 255, 255); /* Fond légèrement transparent pour le conteneur */
+  border-radius: 20px; /* Coins arrondis */
+  padding: 40px; /* Espacement interne */
+  max-width: 600px; /* Largeur maximale pour centrer le contenu */
+  margin: 0 auto; /* Centre le conteneur */
+  text-align: left; /* Aligne le texte à gauche */
+  border: 2px solid #ddd !important; /* Bordure fine et légère */
+
+}
+
+section.user-info h2 {
+  text-transform: uppercase;
+  color: #000000; /* Couleur du texte */
+  border-bottom: 1px solid #eee; /* Bordure en bas */
+  margin-bottom: 30px; /* Espacement sous le titre */
+  padding-bottom: 15px; /* Padding pour le titre */
+  font-size: 22px; /* Taille de police pour le titre */
+  font-weight: 700; /* Gras pour le titre */
+}
+
+section.user-info .info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+section.user-info .info-item {
+  display: flex;
+  margin-bottom: 20px; /* Espacement entre les champs */
+}
+
+section.user-info .info-item .info-label {
+  width: 200px; /* Largeur fixe pour les labels */
+  font-weight: bold;
+  color: #a12c2f; /* Couleur du label */
+  border-radius: 13px;
+
+  padding: 10px; /* Padding autour du label */
+  background-color: #f7f7f7; /* Fond des labels */
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+section.user-info .info-item .info-value {
+  flex: 1;
+  background-color: #C0C0C0; /* Fond des valeurs */
+  border: 1px solid #ddd; /* Bordure des valeurs */
+  border-radius: 20px; /* Coins arrondis */
+  padding: 10px; /* Padding autour des valeurs */
+  color: #000; /* Couleur du texte des valeurs */
+  line-height: 1.6; /* Hauteur de ligne pour une meilleure lisibilité */
+  font-size: 14px;
+}
+
+section.user-info .error-message {
+  color: #7a7a7a; /* Couleur pour les messages d'erreur */
+  border: 1px solid #f7f7f7; /* Bordure pour les messages d'erreur */
+  padding: 15px; /* Padding pour le message d'erreur */
+  border-radius: 10px; /* Coins arrondis */
+  background-color: #f7f7f7; /* Fond pour les messages d'erreur */
+  font-size: 14px; /* Taille de police pour le message d'erreur */
+  margin-bottom: 20px; /* Espacement sous le message d'erreur */
+}
+
+/* Style pour le titre avec logo */
+.title-with-logo {
+  display: flex; /* Utilise flex pour aligner l'image et le texte sur la même ligne */
+  align-items: center; /* Centre l'image et le texte verticalement */
+  font-size: 24px; /* Ajuste la taille du texte du titre */
+}
+
+/* Style pour l'image du logo */
+.logo-icon {
+  height: 100px; /* Ajuste la hauteur du logo */
+  margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+
+
 
 /* 
 ---------------------------------------------
@@ -1829,3 +2101,67 @@ responsive
   }
 
 }
+.button {
+  font-size: 13px;
+  color: #fff;
+  background-color: #a12c2f;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all .3s;
+  border: none;
+  outline: none;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+.button-right {
+  display: block;
+  margin-left: auto;
+  margin-right: 50;
+}
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #a12c2f;
+  color: white;
+  padding: 10px 20px; /* Ajustez les valeurs si nécessaire */
+  border-radius: 5px;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  white-space: nowrap; /* Texte sur une seule ligne */
+}
+
+.toast p {
+  margin: 0;
+  flex: 1; /* Permet au texte de prendre toute la largeur disponible */
+  text-overflow: ellipsis; /* Ajouter une ellipse si le texte dépasse */
+  color: white; /* Texte en blanc */
+}
+
+.close-toast-btn {
+  background-color: #a12c2f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold; /* Texte en gras */
+  margin-left: 15px; /* Espacement entre le texte et le bouton */
+  display: flex;
+  align-items: center;
+}
+
+.close-toast-btn:hover {
+  background-color: #8c1e1e; /* Couleur lors du survol */
+  color: white; /* Le texte reste blanc */
+}
+
